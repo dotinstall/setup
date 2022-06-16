@@ -83,8 +83,13 @@ code {
   font-size: 12px;
 }
 
-h2 > a > .bi {
+li > a > .bi {
   margin-left: 4px;
+  opacity: .5;
+}
+
+li > a > .bi:hover {
+  opacity: 1;
 }
 
 section {
