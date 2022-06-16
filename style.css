@@ -76,3 +76,11 @@ code {
   color: #08c;
   font-size: 12px;
 }
+
+h2 > a > .bi {
+  margin-left: 4px;
+}
+
+section {
+  margin-top: 32px;
+}
