@@ -83,15 +83,29 @@ code {
   font-size: 12px;
 }
 
-li > a > .bi {
+li > a > .bi-play-btn-fill {
   margin-left: 4px;
   opacity: .5;
 }
 
-li > a > .bi:hover {
+li > a > .bi-play-btn-fill:hover {
   opacity: 1;
 }
 
 section {
   margin-top: 32px;
+}
+
+footer {
+  padding: 64px 0;
+  text-align: center;
+}
+
+footer small a {
+  color: #ccc;
+  font-size: 14px;
+}
+
+footer small a img {
+  vertical-align: -4px;
 }
