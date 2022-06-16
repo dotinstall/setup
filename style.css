@@ -8,6 +8,12 @@ body {
     "Hiragino Sans",
     Meiryo,
     sans-serif;
+  counter-reset: number 0;
+}
+
+section > h2::before {
+  counter-increment: number 1;
+  content: counter(number) ". ";
 }
 
 a {
