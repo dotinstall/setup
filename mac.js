@@ -1,6 +1,7 @@
 'use strict';
 
 {
+  // チェックリスト用の配列群
   const arrPC = {
     title: 'PC操作の基本用語',
     list: [
@@ -92,9 +93,10 @@
       'タブを開く/閉じることができる',
     ],
   }
-
+  // section を追加するための paragraph
   const p = document.querySelector('p');
 
+  // 描画用のメソッド
   function renderCheckList(object) {
     const section = document.createElement('section');
     const h2 = document.createElement('h2');
@@ -126,6 +128,7 @@
     p.appendChild(section);
   }
 
+  // 配列を全て描画
   renderCheckList(arrPC);
   renderCheckList(arrMacDisplay);
   renderCheckList(arrBasicOperation);
