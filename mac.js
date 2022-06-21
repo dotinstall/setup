@@ -109,19 +109,20 @@
       input.type = 'checkbox';
       const span = document.createElement('span');
       span.textContent = element;
-      const a = document.createElement('a');
-      a.target = '_blank';
-      a.href = '';
-      // NOTE: 現在動画はないので以下のアイコンは非表示にする
+      // NOTE: 動画を用意していないので、a タグを非表示にする
+      // const a = document.createElement('a');
+      // a.target = '_blank';
+      // a.href = '';
+      // NOTE: 動画を用意していないので、アイコンも非表示にする
       // const i = document.createElement('i');
       // i.classList.add('bi', 'bi-play-btn-fill');
       // i.title = 'レッスン動画の該当箇所';
 
       li.appendChild(input);
       li.appendChild(span);
-      // NOTE: 上記アイコン非表示に連動して↓
+      // NOTE: 上記アイコン非表示・aタグ非表示にに連動して↓
       // a.appendChild(i);
-      li.appendChild(a);
+      // li.appendChild(a);
       ul.appendChild(li);
     });
 
