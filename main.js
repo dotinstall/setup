@@ -18,6 +18,4 @@
       document.execCommand("copy");
     });
   });
-  
 }
-
