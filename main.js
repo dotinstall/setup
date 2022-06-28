@@ -1,8 +1,8 @@
 'use strict';
 
 {
+  // setup icons
   const icons = document.querySelectorAll('.bi');
-
   icons.forEach(icon => {
     icon.addEventListener('click', () => {
       icon.classList.remove('bi-clipboard');
