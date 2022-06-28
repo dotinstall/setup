@@ -31,9 +31,21 @@ a {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 20px;
   border-bottom: 1px solid #aaa;
   padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 span i {
+  font-size: 16px;
+  font-weight: normal;
+  vertical-align: -4px;
+}
+
+h1 span > i {
+  color: #ccc;
 }
 
 h2 {

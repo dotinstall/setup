@@ -2,7 +2,7 @@
 
 {
   // setup icons
-  const icons = document.querySelectorAll('.bi');
+  const icons = document.querySelectorAll('section .bi');
   icons.forEach(icon => {
     icon.addEventListener('click', () => {
       icon.classList.remove('bi-clipboard');
