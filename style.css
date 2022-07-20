@@ -75,13 +75,13 @@ li ul {
   margin: 8px 0 0 40px;
 }
 
-#target li label {
+main li label {
   display: flex;
   gap: 8px;
   align-items: flex-start;
 }
 
-#target li input {
+main li input {
   margin-top: 5px;
 }
 
