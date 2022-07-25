@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCの基礎知識チェックリスト macOS編</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+
+<body>
+  <div class="container">
+    <a class="to-home" href="index.html"><i class="bi bi-house-door-fill"></i> ホーム</a>
+    <h1>
+      PCの基礎知識チェックリスト macOS編
+    </h1>
+    <p>プログラミング学習の前に、PCの基礎知識についてチェックしておきましょう。</p>
+
+    <main>
+      <section>
+        <h2>ファイル・フォルダ操作の基礎知識</h2>
+        <section>
+          <div class="pic">
+            <img src="which_is_folder.png" width="240" height="240">
+          </div>
+          <div class="desc">
+            <h3>どちらがフォルダ、どちらがファイルでしょうか？</h3>
+            <ul class="quiz">
+              <li data-answer="wrong">logo.png、MySiteは両方ともフォルダ</li>
+              <li data-answer="wrong">logo.png、MySiteは両方ともファイル</li>
+              <li data-answer="correct">logo.pngがファイル、MySiteがフォルダ</li>
+              <li data-answer="wrong">logo.pngがフォルダ、MySiteがファイル</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="pic">
+            <img src="left_click.gif" width="240" height="240">
+          </div>
+          <div class="desc">
+            <h3>項目を選択する、こうした操作は何と呼ばれるでしょうか？</h3>
+            <ul class="quiz">
+              <li data-answer="wrong">右クリック</li>
+              <li data-answer="wrong">ダブルクリック</li>
+              <li data-answer="correct">左クリック</li>
+              <li data-answer="wrong">ドラッグ＆ドロップ</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="pic">
+            <img src="right_click.gif" width="240" height="240">
+          </div>
+          <div class="desc">
+            <h3>項目のオプションメニューを操作する、こうした操作は何と呼ばれるでしょうか？</h3>
+            <ul class="quiz">
+              <li data-answer="correct">右クリック</li>
+              <li data-answer="wrong">左クリック</li>
+              <li data-answer="wrong">ダブルクリック</li>
+              <li data-answer="wrong">ドラッグ＆ドロップ</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="pic">
+            <img src="double_click.gif" width="240" height="240">
+          </div>
+          <div class="desc">
+            <h3>項目を開く・実行する、こうした操作は何と呼ばれるでしょうか？</h3>
+            <ul class="quiz">
+              <li data-answer="wrong">左クリック</li>
+              <li data-answer="wrong">右クリック</li>
+              <li data-answer="wrong">ドラッグ＆ドロップ</li>
+              <li data-answer="correct">ダブルクリック</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="pic">
+            <img src="dandd.gif" width="240" height="240">
+          </div>
+          <div class="desc">
+            <h3>こうした操作は何と呼ばれるでしょうか？</h3>
+            <ul class="quiz">
+              <li data-answer="wrong">左クリック</li>
+              <li data-answer="correct">ドラッグ＆ドロップ</li>
+              <li data-answer="wrong">右クリック</li>
+              <li data-answer="wrong">ダブルクリック</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <small>
+        <a href="https://dotinstall.com" target="_blank">
+          Made by <img src="favicon-32x32.png" width="16" height="16">
+        </a>
+      </small>
+    </footer>
+  </div>
+
+  <script>
+    'use strict';
+
+    {
+      const quizzes = document.querySelectorAll('.quiz');
+
+      quizzes.forEach(quiz => {
+        quiz.addEventListener('click', e => {
+          if (e.target.nodeName === 'LI') {
+            e.target.classList.toggle(e.target.dataset.answer);
+          }
+        });
+      });
+
+    }
+  </script>
+</body>
+
+</html>
+

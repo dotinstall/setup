@@ -135,3 +135,68 @@ footer small a {
 footer small a img {
   vertical-align: -4px;
 }
+
+/* quiz */
+
+.quiz li {
+  cursor: pointer;
+  user-select: none;
+}
+
+section > section .pic {
+  width: 45%;
+}
+
+section > section .desc {
+  flex: 1;
+}
+
+section > section img {
+  width: 100%;
+  height: auto;
+}
+
+.quiz .correct {
+  font-weight: bold;
+}
+
+.quiz .wrong {
+  color: #ccc;
+}
+
+.quiz .correct::before {
+  content: '\F26A';
+  font-family: 'bootstrap-icons';
+  margin-right: 4px;
+  vertical-align: -3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #118535;
+}
+
+.quiz .wrong::before {
+  font-family: 'bootstrap-icons';
+  content: '\F622';
+  margin-right: 4px;
+  vertical-align: -3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #d20012;
+}
+
+main > section > section {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+main > section h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+main > section ul {
+  margin-top: 16px;
+  list-style-type: disc;
+  padding-left: 16px;
+}
