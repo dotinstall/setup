@@ -184,7 +184,7 @@ section > section img {
   color: #d20012;
 }
 
-main > section > section {
+main > section > section label {
   display: flex;
   gap: 16px;
   margin-top: 16px;
@@ -193,6 +193,23 @@ main > section > section {
 main > section h3 {
   margin: 0;
   font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+main > section h3 input {
+  margin-top: 5px;
+}
+
+main > section .desc p {
+  line-height: 1.6;
+  color: #333;
+  font-size: 14px;
+  background: #eee;
+  padding: 8px 16px;
+  border-radius: 8px;
+
 }
 
 main > section ul {
