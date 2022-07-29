@@ -224,6 +224,7 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
     'use strict';
 
@@ -236,7 +237,7 @@
         });
       }
 
-      function updateTodo(node) {
+      function updateTodo(node, e) {
         // get latest data
         todos = JSON.parse(localStorage.getItem('checklist_mac')) || [];
 
@@ -244,6 +245,13 @@
           // add to todos
           todos.push(node.id);
           node.checked = true;
+          confetti({
+            spread: 400,
+            origin: {
+              x: e.clientX / window.innerWidth,
+              y: e.clientY / window.innerHeight,
+            },
+          });
         } else {
           // remove from todos
           todos = todos.filter(todo => todo !== node.id);
@@ -255,8 +263,8 @@
       function addListeners() {
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
-          checkbox.addEventListener('click', () => {
-            updateTodo(checkbox);
+          checkbox.addEventListener('click', (e) => {
+            updateTodo(checkbox, e);
           });
         });
       }
