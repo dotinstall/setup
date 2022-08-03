@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 16px 0;
-  color: #333;
+  color: #323135;
   font-family: "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
@@ -26,26 +26,28 @@ a {
 }
 
 .container {
-  width: min(600px, calc(100% - 32px));
+  width: min(640px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 20px;
-  border-bottom: 1px solid #aaa;
-  padding-bottom: 8px;
+  font-size: 21px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+h1 span {
+  margin-left: 16px;
+  font-weight: 600;
+  color: #646369;
+  font-size: 16px;
 }
 
 h1 span i {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
-  vertical-align: -4px;
-}
-
-h1 span > i {
-  color: #ccc;
+  vertical-align: 0px;
+  margin-right: 4px;
 }
 
 h2 {
@@ -53,6 +55,7 @@ h2 {
 }
 
 p {
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -144,14 +147,15 @@ footer small a img {
 }
 
 section > section .pic {
-  width: 45%;
+  width: 208px;
 }
 
 section > section .desc {
-  flex: 1;
+  width: 260px;
 }
 
 section > section img {
+  border-radius: 2px;
   width: 100%;
   height: auto;
 }
@@ -186,13 +190,19 @@ section > section img {
 
 main > section > section label {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
   gap: 16px;
   margin-top: 16px;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  padding: 26px 24px;
 }
 
 main > section h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -204,16 +214,123 @@ main > section h3 input {
 
 main > section .desc p {
   line-height: 1.6;
-  color: #333;
   font-size: 14px;
-  background: #eee;
-  padding: 8px 16px;
-  border-radius: 8px;
-
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: #646369;
 }
 
 main > section ul {
   margin-top: 16px;
   list-style-type: disc;
   padding-left: 16px;
+}
+
+
+
+
+
+.desc-pic {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+.check input {
+  -webkit-appearance: none;
+  border: #98969C solid 2px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background-color linear;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.check input:checked {
+  background-color: #29A329;
+  border-color: #29A329;
+}
+
+.check input:not(:checked):hover {
+  border-color: #ccc9d1;
+}
+
+/* 背景色変更の処理です */
+label.checked {
+  background-color: #E9FBE9;
+}
+
+.check > p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #29A329;
+  margin: 0 0 12px 6px;
+}
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox img {
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  left: 4px;
+  top: 7px;
+}
+
+main > h4 {
+  margin-top: 64px;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (max-width: 720px) {
+
+  .container {
+    width: 358px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    display: block;
+  }
+
+  h1 > span {
+    margin-left: 0;
+  }
+
+  .label {
+    
+  }
+
+  .desc-pic {
+    display: block;
+    width: 208px;
+  }
+
+  section > section .desc {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .check {
+    width: 100%;
+  }
 }

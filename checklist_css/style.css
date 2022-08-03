@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  padding: 16px 0;
+  color: #323135;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  counter-reset: number 0;
+}
+
+section > h2::before {
+  counter-increment: number 1;
+  content: counter(number) ". ";
+}
+
+a {
+  text-decoration: none;
+  color: #08c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(640px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+}
+
+h1 span {
+  margin-left: 16px;
+  font-weight: 600;
+  color: #646369;
+  font-size: 16px;
+}
+
+h1 span i {
+  font-size: 18px;
+  font-weight: normal;
+  vertical-align: 0px;
+  margin-right: 4px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+label {
+  cursor: pointer;
+}
+
+li ul {
+  list-style-type: disc;
+  margin: 8px 0 0 40px;
+}
+
+main li label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+main li input {
+  margin-top: 5px;
+}
+
+code {
+  font-family: mono-space;
+  padding: 4px 8px;
+  background: #eee;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.bi-clipboard-check {
+  color: green;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.to-home {
+  text-decoration: none;
+  color: #08c;
+  font-size: 12px;
+}
+
+li > a > .bi-play-btn-fill {
+  margin-left: 4px;
+  opacity: .5;
+}
+
+li > a > .bi-play-btn-fill:hover {
+  opacity: 1;
+}
+
+section {
+  margin-top: 32px;
+}
+
+footer {
+  padding: 64px 0;
+  text-align: center;
+}
+
+footer small a {
+  color: #ccc;
+  font-size: 14px;
+}
+
+footer small a img {
+  vertical-align: -4px;
+}
+
+/* quiz */
+
+.quiz li {
+  cursor: pointer;
+  user-select: none;
+}
+
+section > section .pic {
+  width: 208px;
+}
+
+section > section .desc {
+  width: 260px;
+}
+
+section > section img {
+  border-radius: 2px;
+  width: 100%;
+  height: auto;
+}
+
+.quiz .correct {
+  font-weight: bold;
+}
+
+.quiz .wrong {
+  color: #ccc;
+}
+
+.quiz .correct::before {
+  content: '\F26A';
+  font-family: 'bootstrap-icons';
+  margin-right: 4px;
+  vertical-align: -3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #118535;
+}
+
+.quiz .wrong::before {
+  font-family: 'bootstrap-icons';
+  content: '\F622';
+  margin-right: 4px;
+  vertical-align: -3px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #d20012;
+}
+
+main > section > section label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  gap: 16px;
+  margin-top: 16px;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  padding: 26px 24px;
+}
+
+main > section h3 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+main > section h3 input {
+  margin-top: 5px;
+}
+
+main > section .desc p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: #646369;
+}
+
+main > section ul {
+  margin-top: 16px;
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+.desc-pic {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+.check input {
+  -webkit-appearance: none;
+  border: #98969C solid 2px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background-color linear;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.check input:checked {
+  background-color: #29A329;
+  border-color: #29A329;
+}
+
+.check input:not(:checked):hover {
+  border-color: #ccc9d1;
+}
+
+
+
+/* 背景色変更の処理です */
+label {
+  transition: .3s background-color;
+}
+
+label.checked {
+  background-color: #E9FBE9;
+}
+
+.check > p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #29A329;
+  margin: 0 0 12px 6px;
+}
+
+.checkbox {
+  position: relative;
+}
+
+.checkbox img {
+  position: absolute;
+  pointer-events: none;
+  width: 24px;
+  left: 4px;
+  top: 7px;
+}
+
+main > h4 {
+  margin-top: 64px;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (max-width: 680px) {
+  .container {
+    margin: 20px auto;
+  }
+
+  label .check {
+    width: 100px;
+  }
+
+  label .desc-pic {
+    flex: 1;
+    display: block;
+  }
+
+  section > section .desc {
+    width: auto;
+  }
+
+  section > section .pic {
+    width: 300px;
+    margin-top: 16px;
+  }
+}
+
+#count {
+  position: fixed;
+  inset: 0 0 auto auto;
+  padding: 8px 16px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+}
