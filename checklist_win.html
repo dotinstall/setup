@@ -346,7 +346,7 @@
 
       function updateTodo(node, e) {
         // get latest data
-        todos = JSON.parse(localStorage.getItem('checklist_mac')) || [];
+        todos = JSON.parse(localStorage.getItem('checklist_win')) || [];
 
         if (todos.indexOf(node.id) === -1) {
           // add to todos
@@ -380,7 +380,7 @@
       }
 
       function saveTodos() {
-        localStorage.setItem('checklist_mac', JSON.stringify(todos));
+        localStorage.setItem('checklist_win', JSON.stringify(todos));
       }
 
       function updateCount() {
