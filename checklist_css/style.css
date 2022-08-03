@@ -334,4 +334,6 @@ main > h4 {
   font-size: 12px;
   background: rgba(0, 0, 0, .8);
   color: #fff;
+
+  display: none; /* temporarily disabled */
 }
