@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <a class="to-home" href="index.html"><i class="bi bi-house-door-fill"></i> ホーム</a>
+    <a class="to-home" href="index.html"><i class="bi bi-house-door-fill"></i> プログラミングを始めよう</a>
     <h1>
       プログラミング学習前チェックリスト <span><i class="bi bi-apple"></i>macOS編</span>
     </h1>
@@ -326,7 +326,13 @@
         </a>
       </small>
     </footer>
-    <span id="count">0/0</span>
+
+    <div class="result">
+      <div class="container">
+        <p id="result_text_1"><span id="result_count">0</span> / <span id="result_total">13</span> 個にチェックがつきました！</p>
+        <p id="result_text_2">わからないことがあれば検索して、すべてのチェックを目指しましょう！</p>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -386,13 +392,15 @@
       function updateCount() {
         const checkedCount = todos.length;
         const checkboxesCount = document.querySelectorAll('input[type="checkbox"]').length;
-        let msg;
-        if (checkboxesCount === checkedCount) {
-          msg = `You're Awesome!`;
+        if (checkedCount < 10) {
+          document.getElementById('result_text_2').textContent = 'わからないことがあれば検索して、すべてのチェックを目指しましょう！';
+        } else if (checkedCount < 13) {
+          document.getElementById('result_text_2').textContent = 'すべてにチェックがつくまであと少し！';
         } else {
-          msg = `${checkedCount}/${checkboxesCount} Completed`;
+          document.getElementById('result_text_2').innerHTML = 'お疲れさまでした！<a href="https://dotinstall.com/lessons/basic_pcsetup_mac_v4/60402" target="_blank">続きのレッスン</a>へ進みましょう。';
         }
-        document.getElementById('count').textContent = msg;
+        document.getElementById('result_count').textContent = todos.length;
+        document.getElementById('result_total').textContent = document.querySelectorAll('input[type="checkbox"]').length;
       }
 
       updateCheckboxes();
