@@ -317,7 +317,7 @@
           </label>
         </section>
       </section>
-      <h4>すべてにチェックがついたら、レッスンへ進んでみましょう！</h4>
+      <!-- <h4>すべてにチェックがついたら、レッスンへ進んでみましょう！</h4> -->
     </main>
     <footer>
       <small>
@@ -393,7 +393,7 @@
         const checkedCount = todos.length;
         const checkboxesCount = document.querySelectorAll('input[type="checkbox"]').length;
         if (checkedCount < 10) {
-          document.getElementById('result_text_2').textContent = 'わからないことがあれば検索して、すべてのチェックを目指しましょう！';
+          document.getElementById('result_text_2').textContent = 'わからないことがあれば検索して、すべてにチェックがついたらレッスンへ進んでみましょう！';
         } else if (checkedCount < 13) {
           document.getElementById('result_text_2').textContent = 'すべてにチェックがつくまであと少し！';
         } else {
