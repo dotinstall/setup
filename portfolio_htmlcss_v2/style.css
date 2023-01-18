@@ -1,94 +1,71 @@
-/* common */
+@charset "utf-8";
 
 body {
   margin: 0;
-  /* font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; */
 }
-
-* {
-  /* box-sizing: border-box; */
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  /* line-height: 1.8; */
-}
-
-h1,
-h2,
-h3 {
-  font-weight: normal;
-}
-
-/* header */
 
 header {
   background: #eee;
-  padding: 32px 0;
   text-align: center;
+  padding: 32px 0;
 }
 
-header h1 {
-  font-size: 24px;
-  margin-top: 16px;
-}
-
-header .icon {
+header img {
   border-radius: 50%;
 }
 
-/* works */
+h1 {
+  margin: 16px 0 0;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
 
 main {
   padding: 64px 0;
 }
 
-.works img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.works section {
-  width: calc(100% - 32px);
-  max-width: 400px;
-  margin: 64px auto 0;
-}
-
-.works h2 {
+h2 {
+  margin: 0;
+  font-weight: normal;
   font-size: 24px;
   text-align: center;
 }
 
-.works h3 {
+h3 {
+  margin: 16px 0 0;
+  font-weight: normal;
   font-size: 20px;
-  margin-top: 16px;
 }
 
-.works p {
+section {
+  width: 400px;
+  margin: 64px auto 0;
+}
+
+section p {
   margin-top: 16px;
   line-height: 1.8;
 }
 
-/* footer */
-
 footer {
   border-top: 1px solid #ccc;
-  padding: 64px 0;
   text-align: center;
+  padding: 64px 0;
+}
+
+small {
+  font-size: 14px;
   color: #aaa;
 }
 
-footer address {
+address {
   margin-top: 16px;
 }
 
-footer a:hover {
+a:hover {
   opacity: .7;
-}
-
-footer small {
-  font-size: 14px;
 }
