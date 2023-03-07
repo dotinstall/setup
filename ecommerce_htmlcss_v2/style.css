@@ -1,0 +1,108 @@
+/* common */
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: calc(100% - 64px);
+  margin: 0 auto;
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 32px 0;
+}
+
+/* products */
+
+.products h2 {
+  margin-top: 32px;
+}
+
+.products ul {
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.products img {
+  width: 100%;
+  height: auto;
+}
+
+.products h3 {
+  margin-top: 8px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+small {
+  font-size: 14px;
+}
+
+/* product */
+
+.product {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product div {
+  flex: 1;
+}
+
+.product p {
+  margin-top: 16px;
+}
+
+.product button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
