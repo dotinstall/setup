@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【完成版】 My React App</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container"></div>
+
+  <script type="text/babel">
+    const Menu = (props) => {
+      const decrement = () => {
+        props.onDecrement(props.menuId);
+      };
+
+      const increment = () => {
+        props.onIncrement(props.menuId);
+      };
+
+      return (
+        <li>
+          <button onClick={decrement}>-</button>
+          <button onClick={increment}>+</button>
+          {props.name} ({props.price}円 ☓ {props.count}個)
+        </li>
+      );
+    };
+
+    const getTotal = (menus, counts) => {
+      let total = 0;
+      counts.forEach((count, index) => {
+        total += menus[index].price * count;
+      });
+      return total;
+    }
+
+    const App = () => {
+      const menus = [
+        {id: 0, name: "牛丼", price: 500},
+        {id: 1, name: "カレー", price: 700},
+        {id: 2, name: "サラダ", price: 400},
+      ];
+
+      const [counts, setCounts] = React.useState([0, 0, 0]); 
+      const total = getTotal(menus, counts);
+
+      const handleDecrement = (menuId) => {
+        if (counts[menuId] > 0) {
+          const newCounts = [...counts];
+          newCounts[menuId]--;
+          setCounts(newCounts);
+        }
+      };
+
+      const handleIncrement = (menuId) => {
+        const newCounts = [...counts];
+        newCounts[menuId]++;
+        setCounts(newCounts);
+      };
+
+      const menuElements = menus.map((menu, index) => {
+        return (
+          <Menu 
+            key={menu.id}
+            menuId={menu.id}
+            name={menu.name}
+            price={menu.price}
+            count={counts[index]}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
+          />
+        );
+      });
+
+      return (
+        <>
+          <h1>メニュー</h1>
+          <ul className="menus">
+            {menuElements}
+          </ul>
+          <p>合計: {total.toLocaleString()}円</p>
+        </>
+      );
+    };
+
+    const container = document.getElementById('container');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#container {
+  max-width: 400px;
+  margin: 16px auto 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+p {
+  text-align: right;
+}
+
+button {
+  width: 24px;
+  margin-right: 8px;
+}
