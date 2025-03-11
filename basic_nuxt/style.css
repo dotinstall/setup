@@ -62,6 +62,10 @@ p {
   gap: 32px;
 }
 
+.products a {
+  display: block;
+}
+
 .products img {
   width: 100%;
   height: auto;
